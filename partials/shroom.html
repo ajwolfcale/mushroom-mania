@@ -1,0 +1,18 @@
+<div>
+
+    <input type="text" placeholder="Shroom Search" ng-model="shroomDescription">
+    <button type="radio" ng-click="edible= false">Poisonous</button> 
+    <button type="radio" ng-click="edible= true">Non-Poisonous</button>
+
+    <ul>
+     <li ng-repeat="mushroom in mushrooms | filter: shroomDescription | filter: edible">
+        {{mushroom.name | uppercase}}:  {{mushroom.description}} IS THIS EDIBLE? {{mushroom.edible | uppercase}}
+    </li>
+    </ul>   
+
+
+</div>
+
+
+
+
